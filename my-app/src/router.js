@@ -1,9 +1,9 @@
-import { createBrowserRouter , useLoaderData} from "react-router-dom";
+import { createHashRouter , useLoaderData} from "react-router-dom";
 import ExpList from "./ExpList";
 import Basic from "./basic/basic";
 import AuthCase from "./auth/auth";
 
-export const routerR = createBrowserRouter([
+export const routerR = createHashRouter([
   {
     path: "/",
     element: <ExpList />

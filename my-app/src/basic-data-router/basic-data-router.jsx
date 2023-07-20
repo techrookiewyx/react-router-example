@@ -1,5 +1,5 @@
-import { createBrowserRouter,RouterProvider,useLoaderData } from "react-router-dom";
-let router = createBrowserRouter([
+import { createHashRouter,RouterProvider,useLoaderData } from "react-router-dom";
+let router = createHashRouter([
   {
     path: '/',
     loader: () => ({message:'Hello Date Router!'}),
