@@ -1,7 +1,11 @@
-import { createHashRouter , useLoaderData} from "react-router-dom";
+import { Outlet, createHashRouter , useLoaderData} from "react-router-dom";
 import ExpList from "./ExpList";
 import Basic from "./basic/basic";
 import AuthCase from "./auth/auth";
+import CustomLinkCase from "./custom-link/custom-link";
+import FilterLink from "./custom-filter-link/custom-filer-link";
+import QueryParse from "./custom-query-parse/custom-query";
+import ErrorBoundCase, { Project, ProjectErrorBoundary, RootErrorBoundary, projectLoader } from "./error-boundaries/error-boundaries";
 
 export const routerR = createHashRouter([
   {
@@ -24,5 +28,36 @@ export const routerR = createHashRouter([
   {
     path: 'auth/*',
     element: <AuthCase/>
+  },
+  {
+    path: 'custom-link/*',
+    Component: CustomLinkCase
+  },
+  {
+    path: 'filter-link/*',
+    Component: FilterLink
+  },
+  {
+    path: 'query-parse',
+    Component: QueryParse
+  },
+  {
+    path: 'error-bound',
+    element: <ErrorBoundCase />,
+    children: [
+      {
+        path:'',
+        element: <Outlet/>,
+        errorElement: <RootErrorBoundary />,
+        children: [
+          {
+            path: 'projects/:projectId',
+            element: <Project/>,
+            errorElement: <ProjectErrorBoundary/>,
+            loader: projectLoader,
+          }
+        ]
+      }
+    ]
   }
 ])
