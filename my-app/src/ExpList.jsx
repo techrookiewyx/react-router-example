@@ -24,6 +24,15 @@ export default function ExpList() {
       <li>
         <Link to='error-bound'>案例七</Link>
       </li>
+      <li>
+        <Link to='route-date'>案例八</Link>
+      </li>
+      <li>
+        <Link to='lazy-load'>案例九</Link>
+      </li>
+      <li>
+        <Link to='router-provider-lazy'>案例十</Link>
+      </li>
     </ul>
   )
 }
