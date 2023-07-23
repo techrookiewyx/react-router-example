@@ -33,6 +33,15 @@ export default function ExpList() {
       <li>
         <Link to='router-provider-lazy'>案例十</Link>
       </li>
+      <li>
+        <Link to='modal-example'>案例十一</Link>
+      </li>
+      <li>
+        <Link to='modal-route'>案例十二</Link>
+      </li>
+      <li>
+        <Link to='multi-app'>案例十三</Link>
+      </li>
     </ul>
   )
 }

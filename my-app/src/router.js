@@ -9,6 +9,9 @@ import ErrorBoundCase, { Project, ProjectErrorBoundary, RootErrorBoundary, proje
 import RouteDateCase, { DeferredPage, Home, Todo, TodosBoundary, TodosList, deferredLoader, homeLoader, todoLoader, todosAction, todosLoader } from "./data-route/date-route";
 import LazyLoad from "./lazy-loading/lazy-loading";
 import RouterProviderLazy, { HomeLa, NoMatch } from "./lazyprovider/route-provider-lazy";
+import ModalCase from "./modal-example/modal";
+import ModalRoute, { GalleryMr, HomeMr, ImageView } from "./modal-route-with-outlet/modal-route";
+import MultiApp from "./multi-app/home/multi-app";
 export const routerR = createHashRouter([
   {
     path: "/",
@@ -141,4 +144,32 @@ export const routerR = createHashRouter([
       }
     ]
   },
+  {
+    path: 'modal-example/*',
+    Component: ModalCase,
+  },
+  {
+    path: 'modal-route',
+    Component: ModalRoute,
+    children: [
+      {
+        path: '',
+        Component: HomeMr
+      },
+      {
+        path: 'gallery',
+        Component: GalleryMr,
+        children: [
+          {
+            path: 'img/:id',
+            Component: ImageView
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: 'multi-app/*',
+    Component: MultiApp
+  }
 ])
