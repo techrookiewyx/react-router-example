@@ -5,8 +5,8 @@ import {
   useParams
 } from "react-router-dom";
 import { IMAGES, getImageById } from "../modal-example/images";
-import { Dialog } from "@reach/dialog";
-import "@reach/dialog/styles.css";
+// import { Dialog } from "@reach/dialog";
+// import "@reach/dialog/styles.css";
 import { useRef } from "react";
 export default function ModalRoute() {
   return (
@@ -87,11 +87,11 @@ export function ImageView() {
     throw new Error(`No image found with id: ${id}`);
   }
   return (
-    <Dialog
-      aria-labelledby="label"
-      onDismiss={onDismiss}
-      initialFocusRef={buttonRef}
-    >
+    // <Dialog
+    //   aria-labelledby="label"
+    //   onDismiss={onDismiss}
+    //   initialFocusRef={buttonRef}
+    // >
       <div
         style={{
           display: "grid",
@@ -122,6 +122,6 @@ export function ImageView() {
           Close
         </button>
       </div>
-    </Dialog>
+    // </Dialog>
   )
 }

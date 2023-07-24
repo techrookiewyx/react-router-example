@@ -9,8 +9,8 @@ import {
 } from "react-router-dom";
 import { IMAGES, getImageById } from "./images";
 import { useRef } from "react";
-import { Dialog } from "@reach/dialog";
-import "@reach/dialog/styles.css";
+// import { Dialog } from "@reach/dialog";
+// import "@reach/dialog/styles.css";
 export default function ModalCase() {
   let location = useLocation();
   console.log(location);
@@ -116,11 +116,11 @@ function Modal() {
   }
   if (!image) return null;
   return (
-    <Dialog
-      aria-labelledby="label"
-      onDismiss={onDismiss}
-      initialFocusRef={buttonRef}
-    >
+    // <Dialog
+    //   aria-labelledby="label"
+    //   onDismiss={onDismiss}
+    //   initialFocusRef={buttonRef}
+    // >
     <div
       style={{
         display: "grid",
@@ -151,7 +151,7 @@ function Modal() {
         Close
       </button>
       </div>
-    </Dialog>
+    // </Dialog>
   )
 }
 
