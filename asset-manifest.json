@@ -1,10 +1,18 @@
 {
   "files": {
-    "main.js": "/react-router-example/static/js/main.dd6f1c3b.js",
+    "main.js": "/react-router-example/static/js/main.cafc053d.js",
+    "static/js/439.432cf564.chunk.js": "/react-router-example/static/js/439.432cf564.chunk.js",
+    "static/js/570.5ffff4fa.chunk.js": "/react-router-example/static/js/570.5ffff4fa.chunk.js",
+    "static/js/272.1183c549.chunk.js": "/react-router-example/static/js/272.1183c549.chunk.js",
+    "static/js/294.0f777b4b.chunk.js": "/react-router-example/static/js/294.0f777b4b.chunk.js",
     "index.html": "/react-router-example/index.html",
-    "main.dd6f1c3b.js.map": "/react-router-example/static/js/main.dd6f1c3b.js.map"
+    "main.cafc053d.js.map": "/react-router-example/static/js/main.cafc053d.js.map",
+    "439.432cf564.chunk.js.map": "/react-router-example/static/js/439.432cf564.chunk.js.map",
+    "570.5ffff4fa.chunk.js.map": "/react-router-example/static/js/570.5ffff4fa.chunk.js.map",
+    "272.1183c549.chunk.js.map": "/react-router-example/static/js/272.1183c549.chunk.js.map",
+    "294.0f777b4b.chunk.js.map": "/react-router-example/static/js/294.0f777b4b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.dd6f1c3b.js"
+    "static/js/main.cafc053d.js"
   ]
 }

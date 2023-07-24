@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/272.1183c549.chunk.js","mappings":"8JAAe,SAASA,IACtB,OACEC,EAAAA,EAAAA,KAAA,OAAAC,UACED,EAAAA,EAAAA,KAAA,MAAAC,SAAI,WAGV,C","sources":["lazy-loading/pages/About.jsx"],"sourcesContent":["export default function About(){\n  return (\n    <div>\n      <h2>About</h2>\n    </div>\n  )\n}"],"names":["About","_jsx","children"],"sourceRoot":""}
