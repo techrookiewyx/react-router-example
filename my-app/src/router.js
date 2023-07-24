@@ -1,4 +1,4 @@
-import { Outlet, createHashRouter , useLoaderData} from "react-router-dom";
+import { Outlet, createHashRouter , json, useLoaderData} from "react-router-dom";
 import ExpList from "./ExpList";
 import Basic from "./basic/basic";
 import AuthCase from "./auth/auth";
@@ -12,6 +12,10 @@ import RouterProviderLazy, { HomeLa, NoMatch } from "./lazyprovider/route-provid
 import ModalCase from "./modal-example/modal";
 import ModalRoute, { GalleryMr, HomeMr, ImageView } from "./modal-route-with-outlet/modal-route";
 import MultiApp from "./multi-app/home/multi-app";
+import NavigationCase, { ImportantForm } from "./navigation-blocking/navigation";
+import { NotesCase, loader as notesLoader } from "./notes/notes";
+import { NewNote, action as newAction } from "./notes/new";
+import Note, { loader as noteLoader, action as noteAction } from "./notes/noteIt";
 export const routerR = createHashRouter([
   {
     path: "/",
@@ -171,5 +175,71 @@ export const routerR = createHashRouter([
   {
     path: 'multi-app/*',
     Component: MultiApp
+  },
+  {
+    path: 'navigation-block',
+    Component: NavigationCase,
+    children: [
+      {
+        index: true,
+        Component() {
+          return <h2>Index</h2>
+        }
+      },
+      {
+        path: 'one',
+        Component(){
+          return <h2>One</h2>
+        }
+      },
+      {
+        path: 'two',
+        Component(){
+          return <h2>Two</h2>
+        }
+      },
+      {
+        path: 'three',
+        action: () => json({ok:true}),
+        Component(){
+          return (
+            <>
+              <h2>Three</h2>
+              <ImportantForm/>
+            </>
+          )
+        }
+      },
+      {
+        path: 'four',
+        Component(){
+          return <h2>Four</h2>
+        }
+      },
+      {
+        path: 'five',
+        Component(){
+          return <h2>Five</h2>
+        }
+      }
+    ]
+  },
+  {
+    path: 'notes',
+    loader: notesLoader,
+    Component: NotesCase,
+    children: [
+      {
+        path: 'new',
+        action: newAction,
+        Component: NewNote
+      },
+      {
+        path: 'note/:noteId',
+        action: noteAction,
+        loader: noteLoader,
+        Component: Note
+      }
+    ]
   }
 ])

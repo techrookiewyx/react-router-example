@@ -42,6 +42,12 @@ export default function ExpList() {
       <li>
         <Link to='multi-app'>案例十三</Link>
       </li>
+      <li>
+        <Link to='navigation-block'>案例十四</Link>
+      </li>
+      <li>
+        <Link to='notes'>案例十五</Link>
+      </li>
     </ul>
   )
 }
