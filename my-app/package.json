@@ -41,5 +41,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "workspaces": [
+    "src\\scroll-restoration",
+    "src\\search-params",
+    "src\\ssr",
+    "src\\ssr-data-router",
+    "src\\route-objects"
+  ]
 }
